@@ -2,7 +2,7 @@
 Just a library to sanitize object in node.
 
 ```js
-f={}
+const f={}
 // {}
 index = 'constructor'
 f[index]
@@ -13,8 +13,11 @@ Could lead to some vulnerability if the index can be controlled by user input.
 
 Easy fix:
 ```js
-f=sanitizeObject({})
+const sanitizeObject = require('ObjectSanitizer')
+const f=sanitizeObject({})
 // [Object: null prototype] {}
 f['constructor']
 // undefined
 ```
+
+## THIS IS JUST FOR TROLLING PURPOSE
